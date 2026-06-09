@@ -1,4 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/USS/WorkoutStyles.uss?fileID=7433441132597879392&amp;guid=52525701a75b845468b6f2b32eb87f2d&amp;type=3#WorkoutStyles"/>
-    <ui:VisualElement name="screen-container" class="screen-container"/>
+    <ui:VisualElement name="screen-container" class="screen-container" style="justify-content: space-around; align-content: flex-start;"/>
 </ui:UXML>
