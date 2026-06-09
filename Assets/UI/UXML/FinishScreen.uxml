@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/WorkoutStyles.uss?fileID=7433441132597879392&amp;guid=52525701a75b845468b6f2b32eb87f2d&amp;type=3#WorkoutStyles"/>
+    <ui:VisualElement class="screen">
+        <ui:VisualElement class="spacer-xl"/>
+        <ui:Image source="project://database/Assets/Sprites/trophy.png?fileID=2800000&amp;guid=d388ef5ff7357a149b3555adcaa416cb&amp;type=3#trophy" style="background-image: none; width: auto; height: 200px;"/>
+        <ui:Label text="Ottimo lavoro!" class="title-hero"/>
+        <ui:Label text="Hai completato tutti gli esercizi.&#10;Ricordati di idratati bene!" class="body-text"/>
+        <ui:VisualElement class="spacer-xl"/>
+        <ui:Button name="btn-repeat" text="🔄  RIPETI ALLENAMENTO" class="btn btn--accent btn--large"/>
+        <ui:VisualElement class="spacer-sm"/>
+        <ui:Button name="btn-home" text="🏠  TORNA ALLA HOME" class="btn btn--ghost btn--small"/>
+        <ui:VisualElement class="spacer-sm"/>
+        <ui:Button name="btn-exit" text="✖  ESCI" class="btn btn--danger btn--small"/>
+        <ui:VisualElement class="spacer-md"/>
+    </ui:VisualElement>
+</ui:UXML>

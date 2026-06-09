@@ -1,0 +1,39 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/WorkoutStyles.uss?fileID=7433441132597879392&amp;guid=52525701a75b845468b6f2b32eb87f2d&amp;type=3#WorkoutStyles"/>
+    <ui:VisualElement class="screen editor-screen">
+        <ui:VisualElement class="editor-topbar">
+            <ui:Button name="btn-back" text="← Salva e torna" class="btn btn--ghost btn--small topbar-back"/>
+            <ui:Label text="Esercizi" class="topbar-title"/>
+            <ui:Button name="btn-reset" text="Reset" class="btn btn--danger btn--small topbar-reset"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="list-scroll" vertical-scroller-visibility="Auto" horizontal-scroller-visibility="Hidden" class="editor-scroll">
+            <ui:VisualElement name="list-container" class="list-container"/>
+        </ui:ScrollView>
+        <ui:Button name="btn-add-new" text="＋  AGGIUNGI ESERCIZIO" class="btn btn--accent btn--large editor-add-btn"/>
+        <ui:VisualElement name="form-panel" class="form-panel">
+            <ui:Label text="Esercizio" class="form-title"/>
+            <ui:Label text="Nome" class="form-label"/>
+            <ui:TextField name="field-name" max-length="60" class="form-field"/>
+            <ui:Label text="Tipo" class="form-label"/>
+            <ui:DropdownField name="drop-type" choices="Timer,Ripetizioni" index="0" class="form-field"/>
+            <ui:VisualElement name="row-duration" class="form-row">
+                <ui:Label text="Durata" class="form-label"/>
+                <ui:VisualElement class="slider-row">
+                    <ui:SliderInt name="slider-duration" low-value="5" high-value="300" value="30" class="form-slider"/>
+                    <ui:Label name="lbl-duration-value" text="30s" class="slider-value"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="row-reps" class="form-row">
+                <ui:Label text="Ripetizioni" class="form-label"/>
+                <ui:VisualElement class="slider-row">
+                    <ui:SliderInt name="slider-reps" low-value="1" high-value="50" value="10" class="form-slider"/>
+                    <ui:Label name="lbl-reps-value" text="10" class="slider-value"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="form-actions">
+                <ui:Button name="btn-form-cancel" text="Annulla" class="btn btn--ghost btn--small"/>
+                <ui:Button name="btn-form-save" text="✔  Salva" class="btn btn--green btn--small"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

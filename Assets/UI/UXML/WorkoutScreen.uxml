@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/WorkoutStyles.uss?fileID=7433441132597879392&amp;guid=52525701a75b845468b6f2b32eb87f2d&amp;type=3"/>
+    <ui:VisualElement class="screen">
+        <ui:Label name="lbl-index" text="Esercizio 1 / 11" class="label-index"/>
+        <ui:Label name="lbl-name" text="" class="label-exercise-name"/>
+        <ui:Label name="lbl-phase" text="" class="label-phase phase-prep"/>
+        <ui:VisualElement class="spacer-sm"/>
+        <ui:VisualElement name="timer-block" class="timer-block">
+            <ui:Label name="lbl-timer" text="3" class="label-timer"/>
+            <ui:ProgressBar name="progress-bar" value="100" class="workout-progress" style="border-top-left-radius: 0;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="reps-block" class="reps-block">
+            <ui:Label name="lbl-reps" text="" class="label-reps"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="spacer-xl"/>
+        <ui:Button name="btn-reps-done" text="✔  FINE RIPETIZIONI" class="btn btn--green btn--large" style="margin-left: 4px;"/>
+        <ui:VisualElement class="spacer-md"/>
+    </ui:VisualElement>
+</ui:UXML>
