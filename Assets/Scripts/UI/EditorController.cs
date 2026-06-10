@@ -33,6 +33,11 @@ namespace AllenamentoPersonale
         private VisualElement _rowDuration;
         private VisualElement _rowReps;
 
+        private string iconaCestino = "\U0001F5D1";
+        private string iconaMatita = "\u270F";
+        private string iconaRipetizione = "\u21BB";
+        private string iconaTimer = "\u23F1";
+
         // ── Constructor ────────────────────────────────────────────
         public EditorController(VisualElement root, Action onBack)
         {
@@ -118,8 +123,8 @@ namespace AllenamentoPersonale
             name.AddToClassList("row-name");
 
             var detail = new Label(ex.type == ExerciseType.Timer
-                ? $"⏱ {ex.duration}s"
-                : $"✕ {ex.reps} rip.");
+                ? iconaTimer + $" {ex.duration}s"
+                : iconaRipetizione + $" {ex.reps} rip.");
             detail.AddToClassList("row-detail");
 
             info.Add(name);
@@ -132,14 +137,14 @@ namespace AllenamentoPersonale
             var btnUp = new Button(() => MoveExercise(index, -1)) { text = "▲" };
             btnUp.AddToClassList("btn-icon");
 
-            var btnDown = new Button(() => MoveExercise(index, +1)) { text = "▼" };
+            var btnDown = new Button(() => MoveExercise(index, +1)) { text = "▼" }; 
             btnDown.AddToClassList("btn-icon");
 
-            var btnEdit = new Button(() => OpenForm(index)) { text = "✎" };
+            var btnEdit = new Button(() => OpenForm(index)) { text = iconaMatita };
             btnEdit.AddToClassList("btn-icon");
             btnEdit.AddToClassList("btn-icon--accent");
 
-            var btnDel = new Button(() => DeleteExercise(index)) { text = "✕" };
+            var btnDel = new Button(() => DeleteExercise(index)) { text = iconaCestino };
             btnDel.AddToClassList("btn-icon");
             btnDel.AddToClassList("btn-icon--danger");
 
