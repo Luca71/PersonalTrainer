@@ -83,28 +83,28 @@
 }
 
 .label-index {
-    font-size: 15px;
+    font-size: 45px;
     color: var(--c-gray);
     -unity-text-align: middle-center;
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .label-exercise-name {
-    font-size: 28px;
+    font-size: 60px;
     -unity-font-style: bold;
     color: var(--c-accent);
     -unity-text-align: middle-center;
     white-space: normal;
     width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 20px;
 }
 
 .label-phase {
-    font-size: 16px;
+    font-size: 50px;
     -unity-text-align: middle-center;
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 16px;
 }
 
 .phase-prep {
@@ -132,21 +132,27 @@
 
 .workout-progress {
     width: 88%;
-    height: 10px;
-    margin-top: 8px;
+    height: 30px;
+    margin-top: 10px;
 }
 
 .workout-progress > .unity-progress-bar__background {
     background-color: var(--c-card);
     border-radius: 5px;
-    height: 10px;
+    height: 30px;
 }
 
 .workout-progress > .unity-progress-bar__progress {
     background-color: var(--c-accent);
     border-radius: 5px;
-    height: 10px;
+    height: 30px;
 }
+
+.workout-progress-bar > .unity-progress-bar__container {
+    min-height: 30px;
+    max-height: 30px;
+}
+
 
 .reps-block {
     align-items: center;

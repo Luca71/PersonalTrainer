@@ -27,6 +27,7 @@ namespace AllenamentoPersonale
         public event Action<WorkoutPhase> OnPhaseChanged;
         public event Action<int> OnTick;              // countdown value
         public event Action OnWorkoutFinished;
+        //public event Action OnWorkoutInterrupted;
 
         // ── Internal ───────────────────────────────────────────────
         private Coroutine _coroutine;

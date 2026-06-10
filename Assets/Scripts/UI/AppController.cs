@@ -79,7 +79,8 @@ namespace AllenamentoPersonale
             _workout = new WorkoutController(
                 workoutScreenAsset.CloneTree(),
                 _workoutManager,
-                onFinished: ShowFinish);
+                onFinished: ShowFinish,
+                onInterrupt: ShowHome);
             _screenContainer.Add(_workout.Root);
             _workoutManager.StartWorkout();
         }

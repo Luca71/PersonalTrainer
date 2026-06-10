@@ -22,13 +22,15 @@ namespace AllenamentoPersonale
         private Label         _lblReps;
         private ProgressBar   _progress;
         private Button        _btnRepsDone;
+        private Button        _btnInterrupt;
         private VisualElement _timerBlock;
         private VisualElement _repsBlock;
 
         public WorkoutController(
             VisualElement root,
             WorkoutManager manager,
-            Action onFinished)
+            Action onFinished,
+            Action onInterrupt)
         {
             Root     = root;
             _manager = manager;
@@ -43,15 +45,21 @@ namespace AllenamentoPersonale
             _btnRepsDone = root.Q<Button>("btn-reps-done");
             _timerBlock  = root.Q<VisualElement>("timer-block");
             _repsBlock   = root.Q<VisualElement>("reps-block");
+            _btnInterrupt = root.Q<Button>("btn-interrupt");
 
             // Wire button
             _btnRepsDone?.RegisterCallback<ClickEvent>(_ => _manager.ConfirmRepsDone());
+
+            _btnInterrupt?.RegisterCallback<ClickEvent>(_ => onInterrupt?.Invoke());
 
             // Subscribe to manager events
             _manager.OnExerciseChanged  += HandleExerciseChanged;
             _manager.OnPhaseChanged     += HandlePhaseChanged;
             _manager.OnTick             += HandleTick;
             _manager.OnWorkoutFinished  += () => onFinished?.Invoke();
+
+            //
+            //_manager.OnWorkoutInterrupted += () => onInterrupt?.Invoke();
 
             // Initial state: hide interactive reps button
             SetRepsBlockVisible(false);
